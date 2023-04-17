@@ -36,7 +36,7 @@ class ChromeTest {
     @Test
     void formSubmissionTest() {
         driver.get("http://localhost:9999/");
-        driver.findElement(By.cssSelector("menu-item__control")).sendKeys("Москва");
+        driver.findElement(By.cssSelector("[data-test-id='city']input")).sendKeys("Москва");
         driver.findElement(By.cssSelector("input__box")).sendKeys("Иван Иванов");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79169356902");
         driver.findElement(By.className("checkbox")).click();
